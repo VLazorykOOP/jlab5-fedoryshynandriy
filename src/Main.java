@@ -1,18 +1,20 @@
 import java.io.*;
 import java.util.*;
 import Task1.*;
+import Task2.UniqueWordsFinder;
+
 public class Main {
 
     public static void main(String[] args) {
         System.out.println(" Java lab 5 ");
         //ThreadStarter.main(args);
         Scanner scanner = new Scanner(System.in);
-        int task=3;
-        while (task>2||task<1){
+        int task = 3;
+        while (task > 2 || task < 1) {
             System.out.println("Select what task to execute:");
-            task=scanner.nextInt();
+            task = scanner.nextInt();
         }
-        System.out.println("TASK:"+task);
+        System.out.println("TASK:" + task);
         switch (task) {
             case 1: {
                 List<State> states = new ArrayList<>();
@@ -179,8 +181,24 @@ public class Main {
                 }
                 break;
             }
-            default:
-                System.out.println("Enter 1,2");
+            case 2: {
+                scanner.nextLine();
+                String uniqueWordsText = "";
+                File uniqueWordsFile = null;
+                while (uniqueWordsFile == null || !uniqueWordsFile.exists()) {
+                    System.out.print("Enter the path to file with unique words: ");
+                    uniqueWordsText = scanner.nextLine();
+                    uniqueWordsFile = new File(uniqueWordsText);
+                    if (!uniqueWordsFile.exists()) {
+                        System.out.println("Error: File does not exist. Please try again.");
+                    }
+                }
+
+                HashSet<String> uniqueWords = UniqueWordsFinder.findUniqueWords(uniqueWordsText);
+                System.out.println("UNIQUE:");
+                System.out.println(uniqueWords);
+
+            }
         }
     }
 }
