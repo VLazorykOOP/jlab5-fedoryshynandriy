@@ -1,0 +1,3 @@
+kingdom21 capital21 21 king21
+kingdom2 capital2 2 king2
+kingdom23 capital23 23 king23
