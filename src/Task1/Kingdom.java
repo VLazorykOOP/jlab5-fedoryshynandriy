@@ -35,38 +35,6 @@ public class Kingdom extends State {
         return new Kingdom(name, capital, population, king);
     }
 
-//    public static List<Kingdom> readKingdomsFromFile(String filePath) {
-//        List<Kingdom> kingdoms = new ArrayList<>();
-//        try {
-//            BufferedReader reader = new BufferedReader(new FileReader(filePath));
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                String[] fields = line.split(" ");
-//                String name = fields[0];
-//                String capital = fields[1];
-//                int population = Integer.parseInt(fields[2]);
-//                String king = fields[3];
-//                Kingdom kingdom = new Kingdom(name, capital, population, king);
-//                kingdoms.add(kingdom);
-//            }
-//            reader.close();
-//        } catch (IOException e) {
-//            System.out.println("Error reading file: " + e.getMessage());
-//        }
-//        return kingdoms;
-//    }
-
-//    public static void writeKingdomToFile(String filePath, Kingdom kingdom) {
-//        try {
-//            BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true));
-//            writer.write(kingdom.getName() + " " + kingdom.getCapital() + " " + kingdom.getPopulation() + " " + kingdom.getKing());
-//            writer.newLine();
-//            writer.close();
-//        } catch (IOException e) {
-//            System.out.println("Error writing to file: " + e.getMessage());
-//        }
-//    }
-
     @Override
     public void Show() {
         System.out.println("Type: Kingdom");

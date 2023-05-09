@@ -66,8 +66,7 @@ public class Main {
                 }
 
                 System.out.print("Do you want to add a new republic? (y/n) ");
-                //String append = scanner.nextLine();
-                String append = "n";
+                String append = scanner.nextLine();
 
                 if (append.equalsIgnoreCase("y")) {
                     Republic newRepublic = Republic.getRepublicFromInput();
@@ -117,8 +116,7 @@ public class Main {
                 }
 
                 System.out.print("Do you want to add a new republic? (y/n) ");
-                //append = scanner.nextLine();
-                append = "n";
+                append = scanner.nextLine();
 
                 if (append.equalsIgnoreCase("y")) {
                     Kingdom newKingdom = Kingdom.getKingdomFromInput();
@@ -167,8 +165,7 @@ public class Main {
                 }
 
                 System.out.print("Do you want to add a new republic? (y/n) ");
-                //append = scanner.nextLine();
-                append = "n";
+                append = scanner.nextLine();
 
                 if (append.equalsIgnoreCase("y")) {
                     Monarchy newMonarchy = Monarchy.getMonarchyFromInput();
